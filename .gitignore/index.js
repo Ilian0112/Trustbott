@@ -443,6 +443,10 @@ console.log("Traduction Anglais ==> Espagnol");
 message.reply('https://translate.google.fr/#en/es/' + tradesen.join('%20'))
 break;
 
+     case "panel":
+      message.reply('http://trust-gaming.fr/panel');
+      break;
+      
         default:
             message.channel.sendMessage("Commande invalide ^^ Fait t.help pour voir toutes les commandes disponibles !")
             message.delete();
