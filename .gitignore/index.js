@@ -239,7 +239,7 @@ bot.on("message", async function(message) {
                  .addField("t.stop", "Arreter la musique  Pour l'utiliser, faites .stop !")
                  .addField("t.membre", "Permet de voir le nombre de personnes sur le discord !")
                  .addField("t.serveur", "Pour voir nos serveurs !")
-                 .addField'"t.web", "Pour accèder a notre site !")
+                 .addField("t.web", "Pour accèder a notre site !")
                  .addField("t.google", "Commande pas trop utile mais tu peut faire des recherche google. Pour l'utiliser, faites .google (recherche) !")
                  .addField("t.shelp", "❌Afficher les commandes du staff. Mais seule ceux qui ont la perm de kick pourrons y accèder. ❌")
                 .setColor("#0000ff")
