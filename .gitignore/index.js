@@ -239,6 +239,7 @@ bot.on("message", async function(message) {
                  .addField("t.stop", "Arreter la musique  Pour l'utiliser, faites .stop !")
                  .addField("t.membre", "Permet de voir le nombre de personnes sur le discord !")
                  .addField("t.serveur", "Pour voir nos serveurs !")
+                 .addField'"t.web", "Pour accèder a notre site !")
                  .addField("t.google", "Commande pas trop utile mais tu peut faire des recherche google. Pour l'utiliser, faites .google (recherche) !")
                  .addField("t.shelp", "❌Afficher les commandes du staff. Mais seule ceux qui ont la perm de kick pourrons y accèder. ❌")
                 .setColor("#0000ff")
@@ -442,10 +443,20 @@ tradenes.shift();
 console.log("Traduction Anglais ==> Espagnol");
 message.reply('https://translate.google.fr/#en/es/' + tradesen.join('%20'))
 break;
-
-     case "panel":
-      message.reply('http://trust-gaming.fr/panel');
-      break;
+      
+   case "web":
+   var embed = new Discord.RichEmbed()
+        .addField("Forum", "http://forum.trust-gaming.fr/") 
+        .addField("Panel", "http://trust-gaming.fr/panel")
+        .addField("Membres", "http://trust-gaming.fr/forum/memberlist.php")        
+       .setColor("#00ffcc")
+       .setFooter("Ne fais pas de bétise sur le Forum !")
+       .setAuthor("Notre site")
+       .setDescription("Notre Forum & Boutique")
+       .setTimestamp()
+       message.delete()
+       message.channel.sendEmbed(embed)
+   break;       
       
         default:
             message.channel.sendMessage("Commande invalide ^^ Fait t.help pour voir toutes les commandes disponibles !")
