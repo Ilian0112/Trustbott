@@ -79,7 +79,7 @@ bot.on('message', function(message) {
     });
 
 bot.on("guildMemberAdd", function(member) {
-    member.guild.channels.find("name", "💬-general").sendMessage(member.toString() + " Bienvenue sur le discord de **Trust** ! :white_check_mark:");
+    member.guild.channels.find("name", "💬-general").sendMessage(member.toString() + " Bienvenue sur ``" + message.guild.name + "`` ! :white_check_mark:");
     member.addRole(member.guild.roles.find("name", "Membre"));
 });
 
@@ -149,7 +149,7 @@ bot.on("message", async function(message) {
             if(server.dispatcher) server.dispatcher.end();
         break;     
         case "membres":
-            message.reply("Nous sommes ``" + message.guild.memberCount + " membres`` sur le discord !");
+            message.reply("Nous sommes ``" + message.guild.memberCount + " membres`` sur ``" + message.guild.name + "`` !");
         break
         case "unmute":
         if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.sendMessage("Tu ne peux exécuter cette commande. ❌");
