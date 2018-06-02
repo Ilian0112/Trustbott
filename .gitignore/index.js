@@ -226,7 +226,7 @@ bot.on("message", async function(message) {
                 limit: messagecount
             }).then(messages => message.channel.bulkDelete(messagecount));
                         message.delete()
-           message.channel.send("``"messagecount + " messages`` on été supprimée !")
+           message.channel.send("``" + messagecount + " messages`` on été supprimée !")
             break;
 
        case "reseaux":
