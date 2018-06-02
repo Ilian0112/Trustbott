@@ -27,7 +27,8 @@ bot.on("ready", function () {
     bot.user.setActivity("TrustBOT V1 - t.help | Par Ilian", {
         'type': 'STREAMING',
         'url': "https://www.twitch.tv/zertek_"
-    },
+    }),
+    bot.user.setUsername("TrustBOT - V1")
     bot.channels.find("name", "logs-radio").send("Je suis connectée !");
     console.log("TrustBOT V1 - Connecté");
 });
