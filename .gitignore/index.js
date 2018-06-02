@@ -24,7 +24,10 @@ function play(connection, message) {
 }
 
 bot.on("ready", function () {
-    bot.user.setGame("TrustBOT V1 - t.help |", "https://www.twitch.tv/zertek_")
+    bot.user.setActivity("TrustBOT V1 - t.help | Par Ilian", {
+        'type': 'STREAMING',
+        'url': "https://www.twitch.tv/zertek_"
+    },
     bot.user.setUsername("TrustBOT - V1")
     bot.channels.find("name", "logs-radio").send("Je suis connectée !");
     console.log("TrustBOT V1 - Connecté");
@@ -104,8 +107,8 @@ bot.on("message", async function(message) {
         case "servinfo":
         var servinfo_embed = new Discord.RichEmbed()
             .setTitle("Information du Serveur " + message.guild.name)
-            .addField("Nombre de Membre", "Il y a ``" + message.guild.memberCount + " membres`` sur le serveur.", true)
-            .addField("Proprio du Serveur", "Le proprio du serveur est ``" + message.guild.owner.name + "`` ", true)
+            .addField("Nombre de Membre", "Il y a ``" + message.guild.memberCount + " membres`` sur le serveur.")
+            .addField("Proprio du Serveur", "Le proprio du serveur est ``" + message.guild.owner + "`` ")
             .setColor("#cc0000")
             .setTimestamp()
             message.delete()
