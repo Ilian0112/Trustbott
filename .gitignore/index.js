@@ -34,13 +34,13 @@ bot.on("ready", function () {
 });
 
 bot.on("guildMemberAdd", function(member) {
-    member.guild.channels.find("name", "💬-general").sendMessage(member.toString() + " Bienvenue sur ``" + message.guild.name + "`` ! :white_check_mark:");
-    member.guild.channels.find("name", "general").sendMessage(member.toString() + " Bienvenue sur ``" + message.guild.name + "`` ! :white_check_mark:");
+    member.guild.channels.find("name", "💬-general").send(member.toString() + " Bienvenue sur ``" + message.guild.name + "`` ! :white_check_mark:");
+    member.guild.channels.find("name", "general").send(member.toString() + " Bienvenue sur ``" + message.guild.name + "`` ! :white_check_mark:");
 })
 
 bot.on("guildMemberRemove", function(member) {
-     member.guild.channels.find("name", "💬-general").sendMessage(member.toString() + " Bye bye!" + member.toString() + " :x:");
-     member.guild.channels.find("name", "general").sendMessage(member.toString() + " Bye bye!" + member.toString() + " :x:");
+     member.guild.channels.find("name", "💬-general").send(member.toString() + " Bye bye!" + member.toString() + " :x:");
+     member.guild.channels.find("name", "general").send(member.toString() + " Bye bye!" + member.toString() + " :x:");
 });
 
 
@@ -108,7 +108,7 @@ bot.on("message", async function(message) {
         var servinfo_embed = new Discord.RichEmbed()
             .setTitle("Information du Serveur " + message.guild.name)
             .addField("Nombre de Membre", "Il y a ``" + message.guild.memberCount + " membres`` sur le serveur.")
-            .addField("Proprio du Serveur", "Le proprio du serveur est ``" + message.guild.owner + "`` ")
+            .addField("Proprio du Serveur", "Le proprio du serveur est " + message.guild.owner)
             .setColor("#cc0000")
             .setTimestamp()
             message.delete()
@@ -251,9 +251,9 @@ bot.on("message", async function(message) {
       
            case "serveur":
            var embed = new Discord.RichEmbed()
-                 .addField("[FR/QC] TrusT 1/2 - Roleplay | ZerTeK", "[Rejoindre](steam://connect/79.137.59.137:27015)") 
-                 .addField("[FR/QC] TrusT 2/2 - Roleplay | ZerTeK", "[Rejoindre](steam://connect/79.137.59.137:27016)")
-                 .addField("Mine", "[Rejoindre](steam://connect/79.137.59.137:27018)")
+                 .addField("[FR/QC] TrusT 1/2 - Roleplay | ZerTeK", "steam://connect/79.137.59.137:27015") 
+                 .addField("[FR/QC] TrusT 2/2 - Roleplay | ZerTeK", "steam://connect/79.137.59.137:27016")
+                 .addField("Mine", "steam://connect/79.137.59.137:27018")
                  .addBlankField()
                  .addField("Le Serveur Minecraft (CRACK + 1.8 - 1.12)", "​play.trust-gaming.fr")
                 .setColor("#ffff00")
